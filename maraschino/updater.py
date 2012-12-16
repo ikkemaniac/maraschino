@@ -236,6 +236,7 @@ def gitUpdate():
             logger.log('UPDATER :: Already up to date', 'INFO')
             logger.log('UPDATER :: Git output: ' + str(output), 'DEBUG')
             return 'complete'
+
         elif 'Aborting' in line:
             logger.log('UPDATER :: Unable to update from git: '+line, 'ERROR')
             logger.log('UPDATER :: Output: ' + str(output), 'DEBUG')
