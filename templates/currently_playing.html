@@ -78,14 +78,6 @@
     </p>
   </div>
 
-  <div class="progress" data-progress="{{ percentage_progress }}%">
-    <div class="bar">
-      <div class="inner" style="width: {{ percentage_progress }}%;"></div>
-    </div>
-    <div class="current">{{ current_time }}</div>
-    <div class="total" data-seconds="{{total_time_seconds}}">{{ total_time }}</div>
-  </div>
-
   <div class="controls">
     <div class="previous" data-command="previous" title="Previous">Previous</div>
     <div class="rewind" data-command="rewind" title="Rewind">Rewind</div>
@@ -107,7 +99,13 @@
       <div class="inner" style="height: {{ volume/2 }}px;"></div>
     </div>
   </div>
-
+  <div class="progress" data-progress="{{ percentage_progress }}%">
+    <div class="bar">
+      <div class="inner" style="width: {{ percentage_progress }}%;"></div>
+    </div>
+    <div class="current">{{ current_time }}</div>
+    <div class="total" data-seconds="{{total_time_seconds}}">{{ total_time }}</div>
+  </div>
   {% if currently_playing.plot %}
     <div class="synopsis">
       <h2>
